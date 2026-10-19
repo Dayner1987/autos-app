@@ -1,0 +1,284 @@
+
+/* frontend-autos/src/estilos/admin.css */
+
+/* Contenedor principal */
+.admin-pantalla {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  background: #F4F5F7;
+  overflow: hidden;
+}
+
+/* Scroll principal, dentro del espacio de las pestañas */
+.admin-scroll {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Encabezado rojo */
+.admin-cabecera {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 32px);
+  max-width: 900px;
+  margin: 16px auto 12px;
+  padding: 23px;
+  flex-shrink: 0;
+  border-radius: 21px;
+  background: linear-gradient(
+    125deg,
+    #821427 0%,
+    #C21D30 100%
+  );
+  box-sizing: border-box;
+}
+
+.admin-cabecera .ui-titulo {
+  color: #FFFFFF;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.admin-cabecera .ui-subtitulo {
+  color: #FFE6EB;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Opciones de colecciones */
+.admin-filtros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 8px 16px 16px;
+  box-sizing: border-box;
+}
+
+.admin-filtro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 10px 15px;
+  margin: 0;
+  flex-shrink: 0;
+  border: 1px solid #F0D9DF;
+  border-radius: 12px;
+  background: #F9EAED;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.admin-filtro:hover {
+  background: #F4DCE1;
+}
+
+.admin-filtro.seleccionado {
+  background: #C21D30;
+  border-color: #C21D30;
+}
+
+.admin-filtro-texto {
+  color: #94394A;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.admin-filtro-texto.seleccionado {
+  color: #FFFFFF;
+}
+
+/* Contenido */
+.admin-contenido {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 10px 16px 115px;
+  box-sizing: border-box;
+}
+
+/* Tarjetas y formularios */
+.admin-formulario,
+.admin-registro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  padding: 20px;
+  margin: 13px 0;
+  border: 1px solid #F0E4E8;
+  border-radius: 19px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0 6px 20px rgba(54, 24, 33, .04);
+}
+
+.admin-formulario .ui-campo {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.admin-formulario .ui-etiqueta {
+  color: #343946;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Selectores desplegables */
+.admin-selector {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 53px;
+  margin: 8px 0 13px;
+  padding: 0 9px;
+  border: 1px solid #E7DDE1;
+  border-radius: 13px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.admin-selector:focus-within {
+  border-color: #C21D30;
+}
+
+.admin-selector select {
+  width: 100%;
+  min-height: 51px;
+  padding: 8px;
+  border: 0;
+  outline: none;
+  background: #FFFFFF;
+  color: #252938;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Opciones de enumeraciones y relaciones */
+.admin-opciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 9px 0 15px;
+}
+
+.admin-opcion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 10px 15px;
+  border: 1px solid #F0D9DF;
+  border-radius: 12px;
+  background: #F9EAED;
+  cursor: pointer;
+}
+
+.admin-opcion:hover {
+  background: #F4DCE1;
+}
+
+.admin-opcion.seleccionado {
+  background: #C21D30;
+  border-color: #C21D30;
+}
+
+.admin-opcion-texto {
+  color: #94394A;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.admin-opcion-texto.seleccionado {
+  color: #FFFFFF;
+}
+
+/* Botones */
+.admin-contenido .ui-boton {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  min-height: 52px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.admin-contenido .ui-boton-texto {
+  text-align: center !important;
+  margin: 0;
+}
+
+/* Listado */
+.admin-listado-titulo {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #242938;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.admin-registro-nombre {
+  color: #252A38;
+  font-size: 17px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* Dispositivos pequeños */
+@media (max-width: 600px) {
+  .admin-cabecera {
+    padding: 19px;
+    border-radius: 19px;
+  }
+
+  .admin-cabecera .ui-titulo {
+    font-size: 24px;
+  }
+
+  .admin-contenido {
+    padding: 8px 14px 115px;
+  }
+
+  .admin-formulario,
+  .admin-registro {
+    padding: 17px;
+  }
+
+  .admin-filtros {
+    padding: 8px 14px 15px;
+  }
+}

@@ -1,0 +1,407 @@
+
+/* frontend-autos/src/estilos/detalle.css */
+
+/* Pantalla y desplazamiento */
+
+.detalle-pantalla {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  min-height: 0;
+  background: #F4F5F7;
+  overflow: hidden;
+}
+
+.detalle-scroll {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detalle-contenido {
+  width: 100%;
+  max-width: 860px;
+  min-width: 0;
+  align-self: center;
+  margin: 0 auto;
+  padding: 20px 18px 85px;
+  box-sizing: border-box;
+}
+
+/* Botón de regreso */
+
+.detalle-volver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.detalle-volver-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCE8EC;
+  width: 39px;
+  height: 39px;
+  border-radius: 12px;
+}
+
+.detalle-volver-texto {
+  font-size: 14px;
+  color: #B91C2C;
+  font-weight: 800;
+}
+
+.detalle-volver:hover {
+  opacity: .8;
+}
+
+/* Cargando */
+
+.detalle-cargando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 70px 20px;
+}
+
+/* Fotografía */
+
+.detalle-imagen-contenedor {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #F5E6EA;
+}
+
+.detalle-foto {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.detalle-sin-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 340px;
+  gap: 10px;
+  background: #F8E9ED;
+}
+
+/* Información principal */
+
+.detalle-informacion {
+  padding: 23px 3px 16px;
+}
+
+.detalle-estado {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  gap: 7px;
+  background: #E8F8EF;
+  border-radius: 9px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+}
+
+.detalle-estado-texto {
+  color: #187849;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.detalle-titulo {
+  font-size: clamp(26px, 5vw, 37px);
+  font-weight: 850;
+  color: #252938;
+  letter-spacing: -.6px;
+  line-height: 1.2;
+}
+
+.detalle-marca {
+  color: #7B8493;
+  font-size: 15px;
+  margin-top: 9px;
+}
+
+.detalle-precio-contenedor {
+  margin-top: 19px;
+}
+
+.detalle-precio-etiqueta {
+  font-size: 12px;
+  color: #8992A1;
+  margin-bottom: 6px;
+}
+
+.detalle-precio {
+  color: #C21D30;
+  font-size: 31px;
+  font-weight: 900;
+  letter-spacing: -.5px;
+}
+
+/* Características */
+
+.detalle-caracteristicas {
+  background: #FFFFFF;
+  border: 1px solid #F0E5E8;
+  border-radius: 21px;
+  padding: 21px;
+  margin: 14px 0;
+}
+
+.detalle-subtitulo {
+  color: #252A38;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.detalle-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.detalle-dato {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 calc(50% - 10px);
+  min-width: 0;
+  background: #F7F8FA;
+  border: 1px solid #F0EFF1;
+  border-radius: 13px;
+  padding: 13px;
+}
+
+.detalle-dato-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  background: #FCE9ED;
+  border-radius: 11px;
+}
+
+.detalle-dato-etiqueta {
+  font-size: 11px;
+  color: #8A909D;
+  margin-bottom: 4px;
+}
+
+.detalle-dato-valor {
+  font-size: 14px;
+  font-weight: 800;
+  color: #333945;
+  overflow-wrap: anywhere;
+}
+
+/* Descripción */
+
+.detalle-descripcion-contenedor {
+  background: #FFFFFF;
+  padding: 22px;
+  border-radius: 21px;
+  margin: 8px 0 14px;
+  border: 1px solid #F0E5E8;
+}
+
+.detalle-descripcion {
+  color: #4C5565;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Formulario */
+
+.detalle-formulario {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #F0E4E8;
+  padding: 23px;
+  border-radius: 21px;
+  margin: 13px 0 25px;
+  box-shadow: 0 8px 25px rgba(51, 23, 34, .04);
+  width: 100%;
+  min-width: 0;
+}
+
+.detalle-formulario-cabecera {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #F1EAED;
+}
+
+.detalle-formulario-cabecera .detalle-subtitulo {
+  margin-bottom: 1px;
+}
+
+.detalle-formulario-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCE8EC;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.detalle-formulario .ui-campo {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 13px;
+  border: 1px solid #E4DDE0;
+  padding: 14px;
+  background: #FFFFFF;
+}
+
+.detalle-formulario .ui-campo:focus {
+  border-color: #C21D30;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(194, 29, 48, .08);
+}
+
+.detalle-formulario textarea.ui-campo {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.detalle-formulario .ui-boton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 9px;
+}
+
+.detalle-formulario .ui-boton-texto {
+  text-align: center;
+}
+
+/* Estados y mensajes */
+
+.detalle-aviso,
+.detalle-exito {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 13px;
+  margin: 12px 0;
+}
+
+.detalle-aviso {
+  background: #FFF0F2;
+}
+
+.detalle-exito {
+  background: #E8F7EE;
+}
+
+.detalle-ayuda {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #727D8F;
+  margin-bottom: 18px;
+}
+
+.detalle-nota {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 9px;
+  background: #F7F8FA;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 18px;
+}
+
+/* Pantallas pequeñas */
+
+@media (max-width: 600px) {
+  .detalle-contenido {
+    padding: 15px 14px 95px;
+  }
+
+  .detalle-foto,
+  .detalle-sin-foto {
+    height: 245px;
+    border-radius: 17px;
+  }
+
+  .detalle-imagen-contenedor {
+    border-radius: 17px;
+  }
+
+  .detalle-informacion {
+    padding: 18px 4px;
+  }
+
+  .detalle-titulo {
+    font-size: 27px;
+  }
+
+  .detalle-precio {
+    font-size: 29px;
+  }
+
+  .detalle-caracteristicas,
+  .detalle-formulario,
+  .detalle-descripcion-contenedor {
+    padding: 17px;
+    border-radius: 18px;
+  }
+
+  .detalle-dato {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .detalle-dato-icono {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+@media (max-width: 350px) {
+  .detalle-dato {
+    flex-basis: 100%;
+  }
+}

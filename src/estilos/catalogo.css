@@ -1,0 +1,131 @@
+
+/* NUEVO CATÁLOGO */
+
+.catalogo-cabecera {
+  background: linear-gradient(125deg, #781326, #C21D30);
+  border-radius: 24px;
+  padding: 30px 24px;
+  margin: 18px auto 8px;
+  width: calc(100% - 32px);
+  max-width: 1060px;
+  box-shadow: 0 13px 28px rgba(123, 19, 38, .13);
+}
+
+.catalogo-titulo {
+  color: #FFFFFF;
+  font-size: clamp(27px, 4vw, 39px);
+  font-weight: 850;
+  letter-spacing: -.8px;
+}
+
+.catalogo-subtitulo {
+  color: #FFE6EB;
+  margin-top: 9px;
+}
+
+.catalogo-busqueda {
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 16px;
+  margin-top: 22px;
+  color: #222735;
+}
+
+.catalogo-lista {
+  padding: 20px;
+  max-width: 1060px;
+}
+
+.auto-tarjeta {
+  padding: 0;
+  background: #FFFFFF;
+  border: 1px solid #F0E6E9;
+  border-radius: 21px;
+  margin: 9px 0;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(55, 27, 36, .06);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.auto-tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 30px rgba(55, 27, 36, .12);
+}
+
+.auto-foto,
+.auto-sin-foto {
+  height: 245px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.auto-sin-foto {
+  background: #F8E9ED;
+}
+
+.auto-contenido {
+  padding: 20px;
+}
+
+.auto-nombre {
+  font-size: 20px;
+  color: #242938;
+  font-weight: 800;
+}
+
+.auto-detalle {
+  color: #848A98;
+  margin: 9px 0;
+}
+
+.auto-precio {
+  color: #C21D30;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.auto-estado {
+  background: #E8F8EF;
+  border-radius: 8px;
+  padding: 7px 11px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.auto-estado-texto {
+  color: #187B4D;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.auto-estado.vendido {
+  background: #FCE7EC;
+}
+
+.auto-estado-texto.vendido {
+  color: #AF1C30;
+}
+
+.auto-pie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+
+.auto-etiqueta-precio {
+  color: #9095A2;
+  font-size: 12px;
+}
+
+.auto-ver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCE8EC;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}

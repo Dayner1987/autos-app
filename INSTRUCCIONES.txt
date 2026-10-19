@@ -1,0 +1,59 @@
+FRONTEND-AUTOS — EXPO SDK 57 + STRAPI 5 (SIN TAILWIND/NATIVEWIND)
+
+1) En CMD desde aplicacion-autos ejecuta:
+   npx create-expo-app@latest frontend-autos --template default@sdk-57
+   cd frontend-autos
+
+2) Instala solo las dependencias extras:
+   npx expo install expo-secure-store @expo/vector-icons react-native-safe-area-context
+
+3) BORRA LAS PANTALLAS DE EJEMPLO de la plantilla:
+   - Si la plantilla trae src/app, renombra o borra SOLO src/app antes de copiar.
+   - Si la plantilla trae app en la raíz, borra la carpeta app de ejemplo.
+   - Si hay un src/app antiguo, borra solo ese directorio antes de copiar el nuevo.
+   No borres package.json, node_modules ni assets.
+
+4) COPIA la carpeta src suministrada en frontend-autos/src. Copia tsconfig.json.
+   Conserva package.json de Expo. Verifica en package.json:
+   "main": "expo-router/entry" (por defecto).
+   Con la plantilla default, Expo Router ya está instalado.
+
+5) Copia .env.example como .env, pon IPv4 del PC con ipconfig:
+   EXPO_PUBLIC_API_URL=http://192.168.X.Y:1337
+   NUNCA localhost si usas Expo Go en el celular.
+   No incluyas JWT ni tokens privados en EXPO_PUBLIC_ variables.
+
+6) En una terminal backend-autos: npm run develop
+   En la otra frontend-autos: npx expo start --clear
+   Presiona w para web; escanea QR con Expo Go para Android.
+   PC y celular deben compartir Wi-Fi.
+   Si hay problemas por CORS en web, permite el origen Expo en Strapi.
+
+7) Las imágenes en Autos y Categorías siguen siendo UNA imagen (multiple: false)
+   que se sube desde panel de Strapi /admin. El panel sencillo en Expo permite
+   crear campos de texto y relaciones, no subir fotografías.
+
+8) Compras: no cobran dinero. POST /api/solicitudes-compra crea una solicitud
+   PENDIENTE a precio tomado del servidor. GET muestra solo propias y DELETE
+   permite cancelar solo propias PENDIENTES. Requiere parche del backend.
+
+9) ADMIN APP: crea rol "Administrador app" en Users & Permissions y asigna
+   permisos específicos. NO usar cuenta de administrador del panel /admin como
+   credenciales de la app. Activa GET/POST/DELETE de cada colección solo para
+   ese rol. Nunca habilites borrar usuarios para Public/Authenticated.
+
+10) GitHub: crea un solo repositorio EN aplicacion-autos si quieres alojar
+    backend-autos y frontend-autos juntos. Antes de git add verifica que las
+    carpetas hijas NO contengan su propia carpeta .git (submódulos accidentales).
+    No borres .git si deseas conservar historial independiente: en ese caso
+    usa repositorios separados. No subas .env, .tmp ni node_modules.
+
+11) Si necesitas que un admin EDITE datos ya creados, deberemos habilitar
+    además PUT o PATCH; por ahora SOLO hay GET, POST, DELETE.
+
+NOTA: Los .css son exclusivos de la versión web. Expo Go usa estilos nativos
+manuales en src/estilos/nativos.ts, sin framework. Esta separación es obligatoria
+porque Expo/React Native no interpreta CSS estándar en Android.
+
+libreriasnpx expo install @expo/ui
+npx expo install @react-native-async-storage/async-storage react-native-safe-area-context react-native-screens expo-status-bar @expo/vector-icons

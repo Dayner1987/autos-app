@@ -1,0 +1,58 @@
+
+/* NUEVAS CATEGORÍAS */
+
+.categorias-cabecera {
+  background: linear-gradient(125deg, #781326, #C21D30);
+  padding: 28px 23px;
+  border-radius: 23px;
+  width: calc(100% - 32px);
+  max-width: 1060px;
+  margin: 18px auto 12px;
+}
+
+.categorias-cabecera .ui-titulo {
+  color: #FFFFFF;
+}
+
+.categorias-cabecera .ui-subtitulo {
+  color: #FFE6EB;
+}
+
+.categoria-tarjeta {
+  background: #FFFFFF;
+  padding: 15px;
+  border: 1px solid #F0E6E9;
+  border-radius: 20px;
+  margin: 10px 0;
+  box-shadow: 0 7px 20px rgba(45, 22, 30, .05);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.categoria-tarjeta:hover {
+  background: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 27px rgba(45, 22, 30, .1);
+}
+
+.categoria-foto,
+.categoria-sin-foto {
+  border-radius: 14px;
+  height: 210px;
+  object-fit: cover;
+}
+
+.categoria-sin-foto {
+  background: #F9E9ED;
+}
+
+.categoria-nombre {
+  font-size: 20px;
+  color: #222735;
+  font-weight: 800;
+  margin-top: 15px;
+}
+
+.categoria-descripcion {
+  color: #7F8794;
+  line-height: 1.5;
+}

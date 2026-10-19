@@ -1,0 +1,41 @@
+
+/* NUEVAS SOLICITUDES */
+
+.solicitudes-cabecera {
+  background: linear-gradient(125deg, #781326, #C21D30);
+  border-radius: 23px;
+  padding: 28px 23px;
+  width: calc(100% - 32px);
+  max-width: 780px;
+  margin: 18px auto;
+}
+
+.solicitudes-cabecera .ui-titulo {
+  color: #FFFFFF;
+}
+
+.solicitudes-cabecera .ui-subtitulo {
+  color: #FFE6EB;
+}
+
+.solicitudes-bloque,
+.solicitud-tarjeta {
+  background: #FFFFFF;
+  border: 1px solid #EFE5E8;
+  border-radius: 19px;
+  padding: 22px;
+  margin: 12px 16px;
+  box-shadow: 0 5px 20px rgba(45, 22, 30, .04);
+}
+
+.solicitud-nombre {
+  font-size: 19px;
+  font-weight: 800;
+  color: #252A38;
+}
+
+.solicitud-detalle {
+  color: #7F8794;
+  font-size: 14px;
+  line-height: 1.5;
+}

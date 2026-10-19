@@ -1,0 +1,121 @@
+
+/* NUEVA PANTALLA MI CUENTA */
+
+.cuenta-contenido {
+  width: 100%;
+  max-width: 760px;
+  align-self: center;
+  padding: 30px 20px 50px;
+}
+
+.cuenta-formulario {
+  width: 100%;
+  max-width: 510px;
+  align-self: center;
+  padding: 25px;
+}
+
+.cuenta-panel {
+  background: #FFFFFF;
+  border: 1px solid #F0E5E8;
+  border-radius: 23px;
+  padding: 24px;
+  margin-top: 22px;
+  box-shadow: 0 10px 35px rgba(56, 26, 37, .05);
+}
+
+.cuenta-perfil-cabecera {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  background: #FFF0F3;
+  padding: 20px;
+  border-radius: 17px;
+  margin-bottom: 20px;
+}
+
+.cuenta-avatar {
+  width: 65px;
+  height: 65px;
+  background: #C21D30;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cuenta-avatar-texto {
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.cuenta-nombre {
+  color: #252A39;
+  font-size: 21px;
+  font-weight: 850;
+}
+
+.cuenta-perfil-subtitulo {
+  color: #98515E;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.cuenta-info-fila {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 3px;
+  border-bottom: 1px solid #F1EAEC;
+}
+
+.cuenta-info-etiqueta {
+  color: #898E99;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.cuenta-info-valor {
+  color: #292E3A;
+  font-size: 15px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.cuenta-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 25px;
+}
+
+.cuenta-invitado-icono {
+  width: 80px;
+  height: 80px;
+  background: #FFF0F3;
+  border-radius: 24px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.cuenta-invitado-titulo {
+  text-align: center;
+  color: #242938;
+  font-size: 22px;
+  font-weight: 850;
+  margin-bottom: 12px;
+}
+
+.cuenta-volver {
+  text-align: center;
+  color: #B91C2C;
+  margin: 20px 0;
+  font-weight: 700;
+  cursor: pointer;
+}
