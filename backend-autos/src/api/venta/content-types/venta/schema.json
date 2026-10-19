@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventas",
+  "info": {
+    "singularName": "venta",
+    "pluralName": "ventas",
+    "displayName": "Ventas",
+    "description": "Solicitudes de compra y ventas confirmadas, privadas"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha_venta": { "type": "date", "required": true },
+    "precio_final": { "type": "decimal", "required": true, "min": 0 },
+    "metodo_pago": { "type": "enumeration", "enum": ["EFECTIVO", "TRANSFERENCIA", "QR", "OTRO"], "required": true },
+    "estado_solicitud": {
+      "type": "enumeration", "enum": ["PENDIENTE", "CONFIRMADA", "CANCELADA"],
+      "required": true, "default": "PENDIENTE"
+    },
+    "usuario_id": { "type": "integer", "private": true },
+    "observaciones": { "type": "text" },
+    "cliente": {
+      "type": "relation", "relation": "manyToOne",
+      "target": "api::cliente.cliente", "inversedBy": "ventas", "required": true
+    },
+    "auto": {
+      "type": "relation", "relation": "manyToOne",
+      "target": "api::auto.auto", "required": true
+    }
+  }
+}

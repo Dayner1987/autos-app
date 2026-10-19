@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Clientes",
+    "description": "Compradores e interesados; colección privada"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_completo": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 150
+    },
+    "celular": {
+      "type": "string",
+      "required": true,
+      "maxLength": 25
+    },
+    "correo": {
+      "type": "email"
+    },
+    "observaciones": {
+      "type": "text"
+    },
+    "ventas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::venta.venta",
+      "mappedBy": "cliente"
+    }
+  }
+}

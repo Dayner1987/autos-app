@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "Marcas",
+    "description": "Fabricantes de automóviles"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "pais_origen": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "autos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::auto.auto",
+      "mappedBy": "marca"
+    }
+  }
+}

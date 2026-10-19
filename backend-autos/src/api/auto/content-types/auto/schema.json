@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autos",
+  "info": {
+    "singularName": "auto",
+    "pluralName": "autos",
+    "displayName": "Autos",
+    "description": "Catálogo de autos en venta"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 150
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "modelo": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "anio": {
+      "type": "integer",
+      "required": true,
+      "min": 1900,
+      "max": 2100
+    },
+    "kilometraje": {
+      "type": "integer",
+      "min": 0,
+      "default": 0
+    },
+    "color": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "transmision": {
+      "type": "enumeration",
+      "enum": [
+        "MANUAL",
+        "AUTOMATICA"
+      ],
+      "required": true
+    },
+    "combustible": {
+      "type": "enumeration",
+      "enum": [
+        "GASOLINA",
+        "DIESEL",
+        "GNV",
+        "HIBRIDO",
+        "ELECTRICO"
+      ],
+      "required": true
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "moneda": {
+      "type": "enumeration",
+      "enum": [
+        "BOB",
+        "USD"
+      ],
+      "default": "BOB",
+      "required": true
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "DISPONIBLE",
+        "RESERVADO",
+        "VENDIDO"
+      ],
+      "default": "DISPONIBLE",
+      "required": true
+    },
+    "ubicacion": {
+      "type": "string",
+      "maxLength": 150
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "marca": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::marca.marca",
+      "inversedBy": "autos",
+      "required": true
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "autos",
+      "required": true
+    }
+  }
+}
